@@ -1,0 +1,11 @@
+﻿@page
+@using AS91880.Services;
+@inject PrivacyService _service;
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h2 class="text-center thead-dark">Relevant Implications</h2>
+<p>@_service.Content</p>

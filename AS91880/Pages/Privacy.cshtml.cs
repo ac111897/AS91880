@@ -19,6 +19,8 @@ namespace AS91880.Pages
 
         public void OnGet()
         {
+            ViewData["Date"] = DateTime.Now.Year.ToString();
+            _logger.LogInformation("Accessed privacy page at {Time}", DateTime.Now);
         }
     }
 }

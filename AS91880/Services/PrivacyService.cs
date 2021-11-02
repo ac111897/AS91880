@@ -10,15 +10,18 @@ namespace AS91880.Services
 {
     public class PrivacyService
     {
-        private readonly string content = null;
-        private ILogger<PrivacyService> _logger;
+        private readonly string[] content = null;
+        private readonly ILogger<PrivacyService> _logger;
+        private readonly IConfiguration _config;
+        private string Path => $"{Directory.GetCurrentDirectory()}{_config["privacy-path"]}";
         public PrivacyService(IConfiguration config, ILogger<PrivacyService> logger)
         {
+            _config = config;
             _logger = logger;
-            _logger.LogInformation($"Got privacy at {Directory.GetCurrentDirectory() + config["privacy-path"]}");
-            content = File.ReadAllText(Directory.GetCurrentDirectory() + config["privacy-path"]);
+            _logger.LogInformation("Loaded privacy message located at {Path}\n at {Date}", Path, DateTime.Now);
+            content = File.ReadAllLines(Path);
         }
-        public string Content
+        public string[] Content
         {
             get
             {
@@ -26,9 +29,9 @@ namespace AS91880.Services
                 return content
                     ??
 #if (DEBUG)
-                    "Couldn't find content";
+                    new[] { $"Couldn't find content at {Path}" };
 #else
-                    string.Empty;
+                    new[] { "Couldn't find content"};
 #endif
 
 

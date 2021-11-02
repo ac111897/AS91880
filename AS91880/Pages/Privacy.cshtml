@@ -8,4 +8,11 @@
 
 <h1>@ViewData["Title"]</h1>
 <h2 class="text-center thead-dark">Relevant Implications</h2>
-<p>@_service.Content</p>
+@{ 
+    foreach (var element in _service.Content)
+    {
+        <p class="text-center">
+            @element
+        </p>
+    }
+}

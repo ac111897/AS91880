@@ -8,6 +8,9 @@ using Microsoft.Extensions.Logging;
 
 namespace AS91880.Services
 {
+    /// <summary>
+    /// Retrieves privacy policy from ~/Content folder, if not found displays an error msg
+    /// </summary>
     public class PrivacyService
     {
         private readonly string[] content = null;

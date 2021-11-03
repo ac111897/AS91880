@@ -25,6 +25,7 @@ namespace AS91880
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            // add singleton services
             services.AddSingleton<PrivacyService>();
             services.AddRazorPages();   
         }

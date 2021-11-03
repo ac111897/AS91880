@@ -19,7 +19,6 @@ namespace AS91880.Pages
 
         public void OnGet()
         {
-            ViewData["Date"] = DateTime.Now.Year.ToString();
             _logger.LogInformation("Accessed home page at {Date}", DateTime.Now);
             
         }

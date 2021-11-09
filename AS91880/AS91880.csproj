@@ -5,10 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Content\links.txt" />
     <None Remove="Content\privacy.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Content\links.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\privacy.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

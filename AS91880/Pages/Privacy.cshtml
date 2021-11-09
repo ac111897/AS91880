@@ -1,6 +1,6 @@
 ﻿@page
 @using AS91880.Services;
-@inject PrivacyService _service;
+@inject ContentService _service;
 @model PrivacyModel
 @{
     ViewData["Title"] = "Privacy Policy";
@@ -12,10 +12,24 @@
 </div>
 <h2 class="text-center thead-dark">Relevant Implications</h2>
 @{ 
-    foreach (var element in _service.Content)
+    foreach (var element in _service.GetContent("privacy-path"))
     {
         <p class="text-center">
             @element
         </p>
     }
+}
+<h2 class="text-center thead-dark">Resources used</h2>
+@{
+    <ul class="align-content-center">
+        @{
+            foreach (var element in _service.GetContent("links"))
+            {
+                <li>
+                <a href=@element target="_blank">@element</a>
+                </li>
+
+            }
+    }
+    </ul>
 }

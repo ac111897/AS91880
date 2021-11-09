@@ -26,7 +26,7 @@ namespace AS91880
         {
             services.AddControllers();
             // add singleton services
-            services.AddSingleton<PrivacyService>();
+            services.AddSingleton<ContentService>();
             services.AddRazorPages();   
         }
 

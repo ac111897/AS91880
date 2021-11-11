@@ -1,6 +1,6 @@
 ﻿@using Microsoft.Extensions.Configuration;
 @using AS91880.Services;
-@inject IConfiguration config;
+@inject IConfiguration config; // inject configuration for website title
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +15,7 @@
 
 </head>
 <body>
+    <!-- navigation bar -->
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -47,13 +48,13 @@
             @RenderBody()
         </main>
     </div>
-
+    <!-- footer included with author and link to privacy page -->
     <footer class="border-top footer">
         <div class="container">
             &copy; @DateTime.Now.Year -  @config["owner"] - AS91880 - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
-
+    <!-- add jquery and bootstrap libraries-->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -5,23 +5,27 @@
 */
 @import url('../fonts/Poppins-Regular.ttf');
 @import url('../fonts/Dongle-Regular.ttf');
-
+/* configure fonts on text tags */
 h1, h2, h3, h4, p {
     font-family: "Poppins Regular", sans-serif;
 }
+/* use dongle regular for links instead */
 a {
     font-family: "Dongle Regular", sans-serif;
     color: #0366d6;
     text-decoration: none;
 }
+/* align image to left with padding */
 #hp {
     float: left;
     padding: 0 20px 20px 0;
 }
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+
 }
 /* Provide sufficient contrast against white background */
 
@@ -32,7 +36,7 @@ a.navbar-brand {
     justify-content: center;
     text-align: center;
 }
-
+/* stock setup */
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;

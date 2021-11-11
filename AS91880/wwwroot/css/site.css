@@ -1,17 +1,37 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿/* 
+    import fonts:
+    main font, hyperlink font
+    static file for fonts to save user resources so you don't have to load from external sources
+*/
+@import url('../fonts/Poppins-Regular.ttf');
+@import url('../fonts/Dongle-Regular.ttf');
 
+h1, h2, h3, h4, p {
+    font-family: "Poppins Regular", sans-serif;
+}
+a {
+    font-family: "Dongle Regular", sans-serif;
+    color: #0366d6;
+    text-decoration: none;
+}
+#hp {
+    float: left;
+    padding: 0 20px 20px 0;
+}
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
-
 /* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
 
+/* Align content on home page */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 .btn-primary {
   color: #fff;
@@ -60,8 +80,9 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background: linear-gradient(160deg, rgba(0,147,233,1) 0%, rgba(128,208,199) 35%);
 }
 .footer {
   position: absolute;

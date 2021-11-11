@@ -19,7 +19,7 @@ namespace AS91880.Pages
 
         public void OnGet()
         {
-            _logger.LogInformation("Accessed privacy page at {Time}", DateTime.Now);
+            _logger.LogInformation("Accessed {page} at {Time}", nameof(NotFoundModel), DateTime.Now);
         }
     }
 }

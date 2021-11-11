@@ -1,0 +1,5 @@
+﻿-> Homepage : /Home or /Index
+-> Privacy page: /Privacy
+-> Myth #1: /Myth
+-> Myth #2: /Myth2
+-> 404 : /NotFound -> /Home

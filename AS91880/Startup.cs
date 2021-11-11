@@ -26,7 +26,7 @@ namespace AS91880
         {
             services.AddControllers();
             // add singleton services
-            services.AddSingleton<ContentService>();
+            services.AddSingleton<IContentService, ContentService>();
             services.AddRazorPages();   
         }
 
@@ -43,6 +43,8 @@ namespace AS91880
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            // Reroute 404's to /NotFound page
             app.Use(async (context, next) =>
             {
                 await next();
@@ -53,6 +55,7 @@ namespace AS91880
                 }
             });
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseRouting();

@@ -1,2 +1,3 @@
 This website does not infringe on copyright law for media content.
 This website does not use any images of anyone without their consent and doesn't include anyone's private information.
+This website is designed to be more accessible to anyone by the use of alt tags on images and color blind friendly limited range of colors.

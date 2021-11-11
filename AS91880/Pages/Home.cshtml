@@ -3,8 +3,15 @@
 @{
     ViewData["Title"] = "Home";
 }
-
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-1 text-center">The Myths</h1>
+</div>
+
+<div class="content text-center">
+    <!--Route images to pages-->
+    <h3>The Loch Ness Monster</h3>
+    <a asp-page="/Myth"><img src=~/img/Hoaxed_photo_of_the_Loch_Ness_monster.jpg alt="lochness image link" /></a>
+    <h2 style="display: inline-block">Both of these creatures are regarded as terrifying monsters of the sea</h2>
+    <h3>The Kraken</h3>
+    <a asp-page="/Myth2"><img src="~/img/220px-Colossal_octopus_by_Pierre_Denys_de_Montfort.jpg" alt="kraken image link"/></a>
 </div>

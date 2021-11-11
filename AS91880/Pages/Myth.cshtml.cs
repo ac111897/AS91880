@@ -15,9 +15,9 @@ namespace AS91880.Pages
         {
             _logger = logger;
         }
-        public void OnGet()
+        public void OnGet() // log access time
         {
-            _logger.LogInformation("Accessed myth at {Date}", DateTime.Now);
+            _logger.LogInformation("Accessed {page} at {Time}", nameof(NotFoundModel), DateTime.Now);
         }
     }
 }
